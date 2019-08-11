@@ -8,22 +8,21 @@ import Error from "./pages/Error";
 
 import { Switch, Route } from 'react-router';
 
-import Navbar from "./components/Navbar";
-
 
 function App() {
-  return (
-    <>
-    <Navbar />
+  return <>
+    {/* <Home />
+    <Rooms />
+    <SingleRoom />
+    <Error /> */}
+
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/rooms/" component={Rooms} />
-      <Route exact path="/rooms/:slug" component={SingleRoom} />
-      <Route component={Error} />
+      <Route path="/rooms/" component={Rooms} />
+      <Route path="/singleroom" component={SingleRoom} />
     </Switch>
-      
-    </>
-  );
+
+  </>;
 }
 
 export default App;

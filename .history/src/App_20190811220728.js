@@ -8,13 +8,10 @@ import Error from "./pages/Error";
 
 import { Switch, Route } from 'react-router';
 
-import Navbar from "./components/Navbar";
-
 
 function App() {
   return (
     <>
-    <Navbar />
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/rooms/" component={Rooms} />
