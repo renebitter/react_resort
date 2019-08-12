@@ -240,7 +240,7 @@ h6 {
   width: 90vw;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); */
   grid-row-gap: 2rem;
   grid-column-gap: 50px;
 }
@@ -252,7 +252,6 @@ h6 {
 }
 .services h6 {
   letter-spacing: var(--mainSpacing);
-  text-transform: capitalize;
 }
 .services p {
   width: 80%;

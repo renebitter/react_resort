@@ -221,10 +221,10 @@ h6 {
   margin-bottom: 1rem;
 }
 .section-title div {
-  width: 5rem;
+  /* width: 5rem;
   height: 5px;
   margin: 0 auto;
-  background: var(--primaryColor);
+  background: var(--primaryColor); */
 }
 /* end of Title */
 
@@ -252,7 +252,6 @@ h6 {
 }
 .services h6 {
   letter-spacing: var(--mainSpacing);
-  text-transform: capitalize;
 }
 .services p {
   width: 80%;
