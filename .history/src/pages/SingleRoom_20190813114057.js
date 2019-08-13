@@ -28,7 +28,7 @@ export default class SingleRoom extends Component {
 
         return (
             <div>
-                Hello from SingleRoom page {room.name}
+                Hello from SingleRoom page
             </div>
         )
     }
