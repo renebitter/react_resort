@@ -10,8 +10,7 @@ class RoomProvider extends Component {
         rooms: [],
         sortedRooms: [],
         featuredRooms: [],
-        //TODO:
-        loading: true
+        loading: false
     };    
 
     // getData
@@ -24,8 +23,7 @@ class RoomProvider extends Component {
             rooms, 
             featuredRooms, 
             sortedRooms:rooms, 
-            //TODO:
-            loading: false
+            loading:false
         })
     }
 
@@ -61,14 +59,5 @@ class RoomProvider extends Component {
 }
 
 const RoomConsumer = RoomContext.Consumer;
-
-//Higher order component
-export function withRoomConsumer(Component){
-    return function ConsumerWrapper(props){
-        return <RoomConsumer>
-            {value => <Component {...props} context={value} /> }
-        </RoomConsumer>
-    }
-}
 
 export { RoomProvider, RoomConsumer, RoomContext };
