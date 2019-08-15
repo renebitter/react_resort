@@ -444,7 +444,7 @@ export default [
         {
           fields: {
             file: {
-              //comment out in order to force default img
+              //commented out in order to force default img
               url: img8
             }
           }

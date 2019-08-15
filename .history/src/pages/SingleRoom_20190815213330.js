@@ -54,9 +54,8 @@ export default class SingleRoom extends Component {
         const [mainImg, ...allImages] = images;
 
         return (
-            <>            
+            <>
             {/* <StyledHero img={images[0]}> */}
-            {/* Using just main image */}
             <StyledHero img={mainImg}>
                 <Banner title={`${name} room`}>
                     <Link to="/rooms" className="btn-primary">
@@ -71,31 +70,6 @@ export default class SingleRoom extends Component {
                             return <img key={index} src={item} alt={name}/>
                         })}
                 </div>
-                <div className="single-room-info">
-                    <article className="desc">
-                        <h3>Details</h3>
-                        <p>{description}</p>
-                    </article>
-                    <article className="info">
-                        <h3>Info</h3>
-                        <h6>Price : ${price}</h6>
-                        <h6>Size : {size} SQF</h6>
-                        <h6>max capacity : {
-                                capacity > 1 ?  `${capacity} people` : 
-                                                `${capacity} person`}
-                        </h6>
-                        <h6>{pets ? "pets allowed" : "no pets allowed"}</h6>
-                        <h6>{breakfast && "free breakfast included"}</h6>
-                    </article>
-                </div>
-            </section>
-            <section className="room-extras">
-                <h6>extras</h6>
-                <ul className="extras">
-                    {extras.map((item, index) => {
-                        return <li key={index}>{item}</li>
-                    })}
-                </ul>
             </section>
             </>
         )
