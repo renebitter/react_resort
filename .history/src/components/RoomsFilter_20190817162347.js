@@ -102,7 +102,7 @@ export default function RoomsFilter({rooms}) {
             <div className="size-inputs">
               <input
                 className="size-input"
-                type="number"
+                type="numer"
                 name="minSize"
                 id="minSize"
                 value={minSize}
@@ -110,7 +110,7 @@ export default function RoomsFilter({rooms}) {
               />
               <input
                 className="size-input"
-                type="number"
+                type="numer"
                 name="maxSize"
                 id="maxSize"
                 value={maxSize}

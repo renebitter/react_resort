@@ -2,13 +2,13 @@ import React from 'react';
 import Room from "./Room";
 
 export default function RoomsList({rooms}) {
-    console.log( rooms );
-    if (rooms.length === 0) {
-      return (
-        <div className="empty-search">
-          <h3>unfortunately no rooms with these search parameters</h3>
-        </div>
-      );
+    // console.log( rooms );
+    if(RoomsList.length === 0) {
+        return (
+            <div className="empty-search">
+                <h3>unfortunately no rooms with these search parameters</h3>
+            </div>
+        )
     }
 
     return (

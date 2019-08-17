@@ -104,7 +104,7 @@ export default function RoomsFilter({rooms}) {
                 className="size-input"
                 type="number"
                 name="minSize"
-                id="minSize"
+                // id="minSize"
                 value={minSize}
                 onChange={handleChange}
               />
@@ -112,7 +112,7 @@ export default function RoomsFilter({rooms}) {
                 className="size-input"
                 type="number"
                 name="maxSize"
-                id="maxSize"
+                // id="maxSize"
                 value={maxSize}
                 onChange={handleChange}
               />

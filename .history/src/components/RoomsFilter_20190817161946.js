@@ -102,7 +102,7 @@ export default function RoomsFilter({rooms}) {
             <div className="size-inputs">
               <input
                 className="size-input"
-                type="number"
+                type="numer"
                 name="minSize"
                 id="minSize"
                 value={minSize}
@@ -110,7 +110,7 @@ export default function RoomsFilter({rooms}) {
               />
               <input
                 className="size-input"
-                type="number"
+                type="numer"
                 name="maxSize"
                 id="maxSize"
                 value={maxSize}
@@ -126,7 +126,6 @@ export default function RoomsFilter({rooms}) {
                 type="checkbox"
                 name="breakfast"
                 id="breakfast"
-                checked={breakfast}
                 onChange={handleChange}
               />
               <label htmlFor="breakfast">breakfast</label>
@@ -136,7 +135,6 @@ export default function RoomsFilter({rooms}) {
                 type="checkbox"
                 name="pets"
                 id="pets"
-                checked={pets}
                 onChange={handleChange}
               />
               <label htmlFor="pets">pets</label>

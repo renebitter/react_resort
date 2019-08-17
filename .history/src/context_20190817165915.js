@@ -49,7 +49,6 @@ class RoomProvider extends Component {
         let tempItems = items.map(item => {
             let id = item.sys.id;
             let images = item.fields.images.map(image => image.fields.file.url);
-            
             let room = {...item.fields, images, id};
             return room;            
         });
@@ -101,36 +100,43 @@ class RoomProvider extends Component {
         capacity = parseInt(capacity);
 
         //Filter by type
-        if (type !== "all") {
-          tempRooms = tempRooms.filter(room => room.type === type);
+        if(type !== "all"){
+            tempRooms = tempRooms.filter(
+              room => room.type === type
+            );
         }
 
         //Filter by capacity
         if (capacity !== 1) {
-          tempRooms = tempRooms.filter(room => room.capacity >= capacity);
+          tempRooms = tempRooms.filter(
+            room => room.capacity >= capacity
+          );
         }
         
         //Filter by price
-        tempRooms = tempRooms.filter(room => room.price <= price);
+        tempRooms = tempRooms.filter(
+              room => room.price <= price
+            );
 
         //Filter by Size
-        tempRooms = tempRooms.filter(room => room.size >= minSize && room.size <= maxSize);
+        tempRooms = tempRooms.filter(
+          room => room.size >= minSize && room.size <= maxSize
+        );
 
         //Filter by breakfast
-        if (breakfast) {
-          tempRooms = tempRooms.filter(room => room.breakfast === true);
-        }         
+        tempRooms = tempRooms.filter(
+              room => room.breakfast  === true
+            );
 
         //Filter by pets
-        if (pets) {
-          tempRooms = tempRooms.filter(room => room.pets === true);
-        }
+        tempRooms = tempRooms.filter(
+              room => room.pets === true
+            );  
 
         //Change state
         this.setState({
             sortedRooms:tempRooms
         })
-        
     };
 
     render() {
