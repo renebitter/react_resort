@@ -11,16 +11,7 @@ class RoomProvider extends Component {
         sortedRooms: [],
         featuredRooms: [],
         //TODO:
-        loading: true,
-        type: 'all',
-        capacity: 1,
-        price: 0,
-        minPrice: 0,
-        maxPrice: 0,
-        minSize: 0,
-        maxSize: 0,
-        breakfast: false,
-        pets: false
+        loading: true
     };    
 
     // getData
@@ -29,19 +20,14 @@ class RoomProvider extends Component {
         //this.getData
         let rooms = this.formatData(items);
         let featuredRooms = rooms.filter(room => room.featured === true);
-        let maxPrice = Math.max(...rooms.map(item => item.price));
-        let maxSize = Math.max(...rooms.map(item => item.size));
-
         this.setState({
             rooms, 
             featuredRooms, 
-            sortedRooms:rooms,
-            loading: false,
-            price: maxPrice,
-            maxPrice,
-            maxSize
+            sortedRooms:rooms, 
+            //TODO:
+            loading: false
         })
-    };
+    }
 
     formatData(array){
         let tempItems = items.map(item => {
@@ -51,52 +37,28 @@ class RoomProvider extends Component {
             return room;            
         });
         return tempItems;
-    };
+    }
 
     getRoom = (slug) => {
         let tempRooms = [...this.state.rooms];
         //.filter returns array | .find returns an object
         const room = tempRooms.find(room => room.slug === slug);
         return room;
-    };
-
-    handleChange = event => {
-        //because of checkbox:
-        const target = event.target;
-        const value = event.type === "checkbox" ? target.checked : target.value;
-        const name = event.target.name;
-
-        //[name] for whatever you get back, sets its value
-        this.setState({
-            [name]: value
-        }, 
-        this.filterRooms
-        );
-
-        // const type = event.target.type;
-        // const name = event.target.name;
-        // const value = event.target.value;
-        // console.log(type, name, value);
-    };
-    
-    filterRooms = ( ) => {
-        console.log("filter rooms");
-    };
+    }
 
     render() {
         return (
-          <RoomContext.Provider
+            <RoomContext.Provider 
             value={{
-              ...this.state,
-              getRoom: this.getRoom,
-              handleChange: this.handleChange
-            }}
-          >
-            {this.props.children}
-          </RoomContext.Provider>
-        );
+                ...this.state,
+                getRoom: this.getRoom
+                }}
+            >
+                {this.props.children}
+            </RoomContext.Provider>
+        )
     }
-};
+}
 
 const RoomConsumer = RoomContext.Consumer;
 
@@ -108,6 +70,6 @@ export function withRoomConsumer(Component){
             {value => <Component {...props} context={value} /> }
         </RoomConsumer>
     }
-};
+}
 
 export { RoomProvider, RoomConsumer, RoomContext };

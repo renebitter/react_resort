@@ -1,8 +1,9 @@
 import React from 'react';
 import Room from "./Room";
 
+console.log({rooms})
+
 export default function RoomsList({rooms}) {
-    // console.log( rooms );
     if(RoomsList.lenght === 0) {
         return (
             <div className="empty-search">

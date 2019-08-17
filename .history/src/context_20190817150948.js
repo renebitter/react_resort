@@ -41,7 +41,7 @@ class RoomProvider extends Component {
             maxPrice,
             maxSize
         })
-    };
+    }
 
     formatData(array){
         let tempItems = items.map(item => {
@@ -51,14 +51,14 @@ class RoomProvider extends Component {
             return room;            
         });
         return tempItems;
-    };
+    }
 
     getRoom = (slug) => {
         let tempRooms = [...this.state.rooms];
         //.filter returns array | .find returns an object
         const room = tempRooms.find(room => room.slug === slug);
         return room;
-    };
+    }
 
     handleChange = event => {
         //because of checkbox:
@@ -69,19 +69,17 @@ class RoomProvider extends Component {
         //[name] for whatever you get back, sets its value
         this.setState({
             [name]: value
-        }, 
-        this.filterRooms
-        );
+        }, this.filterRooms)
 
         // const type = event.target.type;
         // const name = event.target.name;
         // const value = event.target.value;
         // console.log(type, name, value);
-    };
+    }
     
     filterRooms = ( ) => {
         console.log("filter rooms");
-    };
+    }
 
     render() {
         return (
@@ -96,7 +94,7 @@ class RoomProvider extends Component {
           </RoomContext.Provider>
         );
     }
-};
+}
 
 const RoomConsumer = RoomContext.Consumer;
 
@@ -108,6 +106,6 @@ export function withRoomConsumer(Component){
             {value => <Component {...props} context={value} /> }
         </RoomConsumer>
     }
-};
+}
 
 export { RoomProvider, RoomConsumer, RoomContext };

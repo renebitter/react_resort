@@ -81,7 +81,7 @@ class RoomProvider extends Component {
     
     filterRooms = ( ) => {
         console.log("filter rooms");
-    };
+    }
 
     render() {
         return (
@@ -96,7 +96,7 @@ class RoomProvider extends Component {
           </RoomContext.Provider>
         );
     }
-};
+}
 
 const RoomConsumer = RoomContext.Consumer;
 
@@ -108,6 +108,6 @@ export function withRoomConsumer(Component){
             {value => <Component {...props} context={value} /> }
         </RoomConsumer>
     }
-};
+}
 
 export { RoomProvider, RoomConsumer, RoomContext };

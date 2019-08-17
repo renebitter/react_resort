@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { RoomContext } from "../context";
 import Title from "../components/Title";
 
-//get all unique values (Set adds value only if value is not in the array already)
+//get all unique values
 const getUnique = (items, value) => {
     return [...new Set(items.map(item => item[value]))];
 }
