@@ -26,8 +26,7 @@ class RoomProvider extends Component {
     getData = async () => {
         try {
             let response = await Client.getEntries({
-              content_type: "beachResortRoom",
-              order: "sys.createdAt"
+              content_type: "beachResortRoom"
             });
 
             let rooms = this.formatData(response.items);
@@ -56,7 +55,7 @@ class RoomProvider extends Component {
         this.getData();        
     };
 
-    formatData(items){
+    formatData(array){
         let tempItems = items.map(item => {
             let id = item.sys.id;
             let images = item.fields.images.map(image => image.fields.file.url);

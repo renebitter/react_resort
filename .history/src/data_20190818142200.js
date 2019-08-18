@@ -15,23 +15,6 @@
 // import img11 from "./images/room-11.jpeg";
 // import img12 from "./images/room-12.jpeg";
 
-let room1;
-let room2;
-let room3;
-let room4;
-let img1;
-let img2;
-let img3;
-let img4;
-let img5;
-let img6;
-let img7;
-let img8;
-let img9;
-let img10;
-let img11;
-let img12;
-
 export default [
   {
     sys: {

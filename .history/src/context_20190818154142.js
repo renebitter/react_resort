@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import items from './data';
+import items from './data';
 import Client from  './contentful';
 
 const RoomContext = React.createContext();
@@ -26,25 +26,7 @@ class RoomProvider extends Component {
     getData = async () => {
         try {
             let response = await Client.getEntries({
-              content_type: "beachResortRoom",
-              order: "sys.createdAt"
-            });
-
-            let rooms = this.formatData(response.items);
-            let featuredRooms = rooms.filter(room => room.featured === true);
-            let maxPrice = Math.max(...rooms.map(item => item.price));
-            let minPrice = Math.min(...rooms.map(item => item.price));
-            let maxSize = Math.max(...rooms.map(item => item.size));
-
-            this.setState({
-              rooms,
-              featuredRooms,
-              sortedRooms: rooms,
-              loading: false,
-              price: maxPrice,
-              maxPrice,
-              minPrice,
-              maxSize
+              content_type: "beachResortRoom"
             });
 
         } catch (error) {
@@ -56,7 +38,7 @@ class RoomProvider extends Component {
         this.getData();        
     };
 
-    formatData(items){
+    formatData(array){
         let tempItems = items.map(item => {
             let id = item.sys.id;
             let images = item.fields.images.map(image => image.fields.file.url);
