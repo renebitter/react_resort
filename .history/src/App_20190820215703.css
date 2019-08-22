@@ -157,20 +157,20 @@ h6 {
 /* end of navbar */
 /* Hero */
 .defaultHero,
-.roomsHero,
-.errorHero {
+.roomsHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/default-hero.jpg") center/cover no-repeat;
+  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .roomsHero {
-  background-image: url("./images/room-hero.jpg");
+  background-image: url("./images/room-2.jpeg");
   min-height: 60vh;
 }
 .errorHero {
-  background-image: url("./images/error-hero.jpg");
+  background-image: url("./images/room-2.jpeg");
+  min-height: 60vh;
 }
 /* End of Hero */
 /* Banner */
@@ -466,7 +466,7 @@ h6 {
 /* end of roomlist */
 /*  rooms fitler*/
 .filter-container {
-  padding: 1.5rem 0;
+  padding: 5rem 0;
 }
 .filter-form {
   width: 60vw;
