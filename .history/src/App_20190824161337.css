@@ -306,7 +306,6 @@ h6 {
 /* room */
 .room {
   display: grid;
-  position: relative;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
   background: var(--offWhite);  
@@ -323,6 +322,7 @@ h6 {
 
 .img-container {
   display: grid;
+  position: relative;
 }
 .img-container img {
   width: 100%;
@@ -355,12 +355,13 @@ h6 {
   transform: scale(0);
   transition: all 0.3s linear;
 }
-.room:hover {
+.img-container img:hover{
   background: rgba(0, 0, 0, 0.8);
-}
-.img-container:hover img {
   opacity: 0.3;
 }
+/* .img-container:hover img {
+  opacity: 0.3;
+} */
 .img-container:hover .price-top {
   opacity: 0;
 }
@@ -368,7 +369,7 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
 }
 .room-info {
-  background: var(--mainGrey);
+  background: var(--offWhite);
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;

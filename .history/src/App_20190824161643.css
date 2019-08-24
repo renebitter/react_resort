@@ -306,7 +306,6 @@ h6 {
 /* room */
 .room {
   display: grid;
-  position: relative;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
   background: var(--offWhite);  
@@ -323,6 +322,7 @@ h6 {
 
 .img-container {
   display: grid;
+  position: relative;
 }
 .img-container img {
   width: 100%;
@@ -368,7 +368,7 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
 }
 .room-info {
-  background: var(--mainGrey);
+  background: var(--offWhite);
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;

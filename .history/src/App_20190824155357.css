@@ -305,11 +305,8 @@ h6 {
 /* end pf featured rooms */
 /* room */
 .room {
-  display: grid;
-  position: relative;
   box-shadow: var(--lightShadow);
-  transition: var(--mainTransition);
-  background: var(--offWhite);  
+  transition: var(--mainTransition);  
 }
 .room:hover {
   box-shadow: var(--darkShadow);
@@ -322,13 +319,12 @@ h6 {
 }
 
 .img-container {
-  display: grid;
+  position: relative;
 }
 .img-container img {
   width: 100%;
   display: block;
   transition: var(--mainTransition);
-  align-self: end;
 }
 .price-top {
   position: absolute;
@@ -355,7 +351,7 @@ h6 {
   transform: scale(0);
   transition: all 0.3s linear;
 }
-.room:hover {
+.img-container:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 .img-container:hover img {
@@ -368,13 +364,12 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
 }
 .room-info {
-  background: var(--mainGrey);
+  background: var(--darkGrey);
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
   font-weight: 700;
   letter-spacing: var(--mainSpacing);
-  align-self: end;
 }
 /* end of room  */
 /* single room*/

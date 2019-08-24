@@ -306,7 +306,6 @@ h6 {
 /* room */
 .room {
   display: grid;
-  position: relative;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
   background: var(--offWhite);  
@@ -323,6 +322,7 @@ h6 {
 
 .img-container {
   display: grid;
+  position: relative;
 }
 .img-container img {
   width: 100%;
