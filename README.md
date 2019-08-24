@@ -18,9 +18,9 @@ https://react-resort.herokuapp.com/
 # TODOS:
 
 
-- [ ] Change Hero background for Home, Rooms and Error page (currently set by css)
+- [ ] Change Hero background for Home, Rooms and Error page dynamically (currently set by css)
 - [x] Fix "Featured rooms" cards: set size limit for imgs
-- [ ] Add carousel for "Featured rooms"
+- [ ] Merge "Room" and "RoomFeatured" into 1 component or make "RoomFeatured" into a "Carousel" component
 - [ ] Fix "Rooms List" (Listing Page): set size limit for imgs
 - [ ] Fix "Single Room" (PDP): set size limit for imgs
 - [ ] Fix img resizing on mobile
