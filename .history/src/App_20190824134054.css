@@ -306,15 +306,10 @@ h6 {
 /* room */
 .room {
   box-shadow: var(--lightShadow);
-  transition: var(--mainTransition);  
+  transition: var(--mainTransition);
 }
 .room:hover {
   box-shadow: var(--darkShadow);
-}
-
-.room-container {
-  padding: 15px;
-  max-width: 370px;
 }
 
 .img-container {
