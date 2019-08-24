@@ -18,7 +18,7 @@ https://react-resort.herokuapp.com/
 # TODOS:
 
 
-- [ ] Change Hero background for Home, Rooms and Error page dynamically (currently set by css). 2 API calls?
+- [ ] Change Hero background for Home, Rooms and Error page dynamically (currently set by css). 2 separate API calls?
 - [ ] Merge "Room" and "RoomFeatured" into 1 component or make "RoomFeatured" into a "Carousel" component
 - [ ] Fix "Single Room" (PDP): set size limit for imgs
 - [ ] Add different filters (by price <>, date created, etc )
