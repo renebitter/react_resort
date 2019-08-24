@@ -18,14 +18,16 @@ https://react-resort.herokuapp.com/
 # TODOS:
 
 
-- [ ] Change Hero background for Home, Rooms and Error page dynamically (currently set by css)
-- [x] Fix "Featured rooms" cards: Grid replaced by Flexbox in order to center single items
+- [ ] Change Hero background for Home, Rooms and Error page dynamically (currently set by css). 2 API calls?
 - [ ] Merge "Room" and "RoomFeatured" into 1 component or make "RoomFeatured" into a "Carousel" component
-- [X] Fix "Rooms List" (Listing Page): set size limit for imgs: Fixed with grid, felxbox and relative position. All cards become size of the largest card.
 - [ ] Fix "Single Room" (PDP): set size limit for imgs
-- [ ] Fix img resizing on mobile
 - [ ] Add different filters (by price <>, date created, etc )
 - [ ] Change general styling (Material UI vs React-Bootstrap)
 - [ ] Refactor CSS to SASS (SCSS)
 - [ ] Create Theme selector on the page
 - [ ] Fix scrolling position when changing pages
+- [ ] Fix img padding/margin on mobile
+
+- [x] Fix "Featured rooms" cards: Grid replaced by Flexbox in order to center single items
+- [X] Fix "Rooms List" (Listing Page): set size limit for imgs: Fixed with grid, felxbox and relative position. All cards become size of the largest card.
+- [X] Fix img resizing on mobile
