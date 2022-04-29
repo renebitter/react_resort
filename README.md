@@ -2,6 +2,7 @@
 
 * React router for routing
 * React context API for state management
+* Contentful for content (image, text) delivery
 
 Live at:
 
